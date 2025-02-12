@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: AWS Serverless Spring Boot 2 API - org.example::aws-lambda-spring
+Description: AWS Serverless Spring Boot 3 API - com.jcmc.demo::aws-lambda-spring
 Globals:
   Api:
     EndpointConfiguration: REGIONAL
@@ -9,8 +9,8 @@ Resources:
   AwsLambdaSpringFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: org.example.StreamLambdaHandler::handleRequest
-      Runtime: java21
+      Handler: com.jcmc.demo.StreamLambdaHandler::handleRequest
+      Runtime: java17
       CodeUri: .
       MemorySize: 512
       Policies: AWSLambdaBasicExecutionRole
